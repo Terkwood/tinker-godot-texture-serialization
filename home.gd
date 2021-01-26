@@ -10,5 +10,8 @@ func _ready():
 	var img = Image.new()
 	var itex = ImageTexture.new()
 	itex.create_from_image(data)
+	
+	# these flags aren't saved as part of data.
+	# if you want to set them, you need to do so manually
 	itex.flags = itex.FLAG_CONVERT_TO_LINEAR
 	$SecondSprite.texture = itex
